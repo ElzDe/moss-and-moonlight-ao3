@@ -1,0 +1,1 @@
+AO3 only accepts externally hosted JPG, GIF, and PNG image URLs in site skins. The final skin uses PNG assets in /assets and separate background-image/background-position/background-repeat/background-size properties so AO3's sanitizer accepts them.

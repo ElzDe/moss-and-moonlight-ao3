@@ -1,67 +1,390 @@
 /* MOSS & MOONLIGHT — AO3 SITE SKIN
-   Original fairy-garden artwork hosted in this repository.
-   Keeps AO3's normal layout, dropdowns, sidebar and banners functional. */
+   Original fairy-garden artwork hosted in your GitHub repository.
+   AO3-safe image syntax: PNG only, and background properties separated.
+   Keeps AO3's normal dropdowns, sidebar, banners and page flow intact. */
 
-html,body{background:#061c1b url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/background.svg") repeat;color:#2f3936}
-body{font-family:Georgia,"Times New Roman",serif}
-#outer,#inner{background:transparent}
-#main{background:#efe3c8;color:#2f3936;border:3px solid #694f34;box-shadow:0 0 0 3px #304b39,0 7px 18px #020b0a;padding:1.4em}
-a,a:link,a:visited{color:#356b69}a:hover,a:focus{color:#9a5f39}
-h1,h2,h3,h4,h5,h6,.heading{color:#3a5748;font-family:Georgia,"Times New Roman",serif}
+html,
+body {
+  background-color: #061c1b;
+  background-image: url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/background.png");
+  background-repeat: repeat;
+  color: #2f3936;
+}
 
-/* illustrated canopy */
-#header{background:#12382f url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/header.svg") top center/100% auto no-repeat;color:#f3e3c1;border-bottom:4px solid #6a4b2e;box-shadow:0 5px 0 #233a2d;padding-top:26%;overflow:visible}
-#header .heading{background:#173a31;color:#f2dfba;border-top:2px solid #6e5134;margin:0;padding:.5em 1em}
-#header .heading a,#header .heading a:visited{color:#f2dfba}
-#header .logo{background:#efe3c8;border-radius:50%;padding:2px}
-#greeting{background:#173a31;color:#f2dfba}
-#greeting a,#greeting a:visited{color:#f2dfba}
+body {
+  font-family: Georgia, "Times New Roman", serif;
+}
 
-/* navigation — no absolute positioning, so dropdowns stay usable */
-#header .primary{background:#4b3524;border-top:2px solid #80603d;border-bottom:2px solid #2a1e16;box-shadow:inset 0 1px 0 #6c5036}
-#header .primary li{background:transparent}
-#header .primary a,#header .primary a:visited{background:#304b39;color:#f2dfba;border:1px solid #98754a;border-radius:.35em;margin:.12em}
-#header .primary a:hover,#header .primary a:focus{background:#567053;color:#ffe5a0}
-#header .menu,#header .dropdown .menu,#header .primary .menu{background:#efe3c8;color:#263b34;border:2px solid #6b5035;box-shadow:0 5px 12px #17221d;z-index:9999}
-#header .menu a,#header .dropdown .menu a{background:#efe3c8;color:#35584e;border:0}
-#header .menu a:hover,#header .dropdown .menu a:hover{background:#d7c79f;color:#6f432e}
-#header .search input[type="text"]{background:#f4e7cd;color:#26332f;border:2px solid #7b5e3e;border-radius:.4em}
-#header .search input[type="submit"]{background:#526d50;color:#fff0ce;border:1px solid #9a774b;border-radius:.4em}
+#outer,
+#inner {
+  background-color: transparent;
+}
 
-/* site notices and fundraiser areas stay in normal flow */
-.flash,.notice,.alert,.caution,.comment_notice,.kudos_notice{background:#ead4ad;color:#34413b;border:3px solid #765839;box-shadow:inset 0 0 0 2px #f5e6ca}
-.flash a,.notice a,.alert a,.caution a{color:#356865}
-progress,meter,[class*="progress"]{background:#27473e;color:#e4b84f;border-color:#735637}
+#main {
+  background-color: #efe3c8;
+  color: #2f3936;
+  border: 3px solid #694f34;
+  box-shadow: 0 0 0 3px #304b39, 0 7px 18px #020b0a;
+  padding: 1.4em;
+}
 
-/* woodland dashboard */
-#dashboard,.dashboard{background:#3b2c20 url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/sidebar-vine.svg") left top/auto 100% no-repeat;color:#f1dfbc;border:3px solid #76593a;box-shadow:inset 0 0 0 2px #4e3b2a;padding-left:2.2em}
-#dashboard ul,.dashboard ul{background:#2a1f17;border-color:#7e6242}
-#dashboard a,.dashboard a,#dashboard a:visited,.dashboard a:visited{color:#f0dfbd}
-#dashboard a:hover,.dashboard a:hover,#dashboard .current,.dashboard .current{background:#4d684d;color:#ffe7a8}
+a,
+a:link,
+a:visited {
+  color: #356b69;
+}
 
-/* homepage cards */
-.splash .module{background:#f1e4ca;color:#2f3b36;border:3px solid #6d5134;box-shadow:inset 0 0 0 2px #d8c39a,0 5px 0 #24392d;padding:1em 1.15em;margin-bottom:1.25em}
-.splash .module h2,.splash .module h3{color:#395a4e;border-bottom:1px solid #96774e}
-.splash .news li{border-bottom:1px dashed #9b835f}
+a:hover,
+a:focus {
+  color: #9a5f39;
+}
 
-/* works/bookmarks/skins */
-li.blurb,.blurb,.bookmark,.series,.comment,.own,.readings,.skins .blurb,.index .blurb{background:#f4e8d0;color:#2f3936;border:3px solid #6e5236;box-shadow:inset 0 0 0 2px #d8c5a1,0 5px 0 #2b4335;margin:1em 0;padding:1em 1.2em}
-.blurb h4 a,.blurb h4 a:visited{color:#365f57}
-.blurb .fandoms a,.blurb .relationships a,.blurb .characters a{color:#557a68}
-.tags a.tag,a.tag,.tag{display:inline-block;background:#d8d5ac;color:#355044;border:1px solid #758265;border-radius:.75em;padding:.16em .52em;margin:.08em .04em;text-decoration:none}
-.tags a.tag:hover,a.tag:hover{background:#718765;color:#fff0c8;border-color:#9c784b}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  color: #3a5748;
+  font-family: Georgia, "Times New Roman", serif;
+}
 
-/* parchment forms */
-.filters,form.filters,#work-filters,fieldset,.listbox,form dl,form .wrapper{background:#ead8b8;color:#3d382f;border:3px solid #745739;box-shadow:inset 0 0 0 2px #f6e7cd}
-input,textarea,select{background:#f7ecd7;color:#2f3935;border:1px solid #876847}
-.actions a,.actions a:visited,.actions input,input[type="submit"],button{background:#526d50;color:#fff0cf;border:1px solid #9d794b;border-radius:.35em;box-shadow:inset 0 1px 0 #71876c,0 2px 0 #2a3b2d}
-.actions a:hover,.actions input:hover,input[type="submit"]:hover,button:hover{background:#6a8060;color:#ffe6a3}
+#header {
+  background-color: #12382f;
+  background-image: url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/header.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  color: #f3e3c1;
+  border-bottom: 4px solid #6a4b2e;
+  box-shadow: 0 5px 0 #233a2d;
+  padding-top: 26%;
+  overflow: visible;
+}
 
-#workskin{max-width:55em;margin:2em auto;background:#f3e7cf;color:#302f2a;border:3px solid #705438;box-shadow:inset 0 0 0 2px #d8c6a3,0 7px 18px #061513;padding:2.3em 2.7em;line-height:1.8}
+#header .heading {
+  background-color: #173a31;
+  color: #f2dfba;
+  border-top: 2px solid #6e5134;
+  margin: 0;
+  padding: .5em 1em;
+}
 
-/* firefly pond */
-#footer{background:#092829 url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/footer.svg") bottom center/100% auto no-repeat;color:#f1dfbd;border-top:4px solid #6d5135;padding-bottom:18%}
-#footer a,#footer a:visited{color:#d8ead1}
+#header .heading a,
+#header .heading a:visited {
+  color: #f2dfba;
+}
 
-@media only screen and (max-width:62em){#header{padding-top:34%;background-size:135% auto}#dashboard,.dashboard{background-image:none;padding-left:0}#footer{padding-bottom:26%;background-size:145% auto}#main{padding:1em}}
-@media only screen and (max-width:42em){#header{padding-top:42%;background-size:170% auto}#workskin{padding:1.4em 1em}#footer{padding-bottom:32%;background-size:170% auto}}
+#header .logo {
+  background-color: #efe3c8;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+#greeting {
+  background-color: #173a31;
+  color: #f2dfba;
+}
+
+#greeting a,
+#greeting a:visited {
+  color: #f2dfba;
+}
+
+#header .primary {
+  background-color: #4b3524;
+  border-top: 2px solid #80603d;
+  border-bottom: 2px solid #2a1e16;
+  box-shadow: inset 0 1px 0 #6c5036;
+}
+
+#header .primary li {
+  background-color: transparent;
+}
+
+#header .primary a,
+#header .primary a:visited {
+  background-color: #304b39;
+  color: #f2dfba;
+  border: 1px solid #98754a;
+  border-radius: .35em;
+  margin: .12em;
+}
+
+#header .primary a:hover,
+#header .primary a:focus {
+  background-color: #567053;
+  color: #ffe5a0;
+}
+
+#header .menu,
+#header .dropdown .menu,
+#header .primary .menu {
+  background-color: #efe3c8;
+  color: #263b34;
+  border: 2px solid #6b5035;
+  box-shadow: 0 5px 12px #17221d;
+  z-index: 9999;
+}
+
+#header .menu a,
+#header .dropdown .menu a {
+  background-color: #efe3c8;
+  color: #35584e;
+  border: 0;
+}
+
+#header .menu a:hover,
+#header .dropdown .menu a:hover {
+  background-color: #d7c79f;
+  color: #6f432e;
+}
+
+#header .search input[type="text"] {
+  background-color: #f4e7cd;
+  color: #26332f;
+  border: 2px solid #7b5e3e;
+  border-radius: .4em;
+}
+
+#header .search input[type="submit"] {
+  background-color: #526d50;
+  color: #fff0ce;
+  border: 1px solid #9a774b;
+  border-radius: .4em;
+}
+
+.flash,
+.notice,
+.alert,
+.caution,
+.comment_notice,
+.kudos_notice {
+  background-color: #ead4ad;
+  color: #34413b;
+  border: 3px solid #765839;
+  box-shadow: inset 0 0 0 2px #f5e6ca;
+}
+
+.flash a,
+.notice a,
+.alert a,
+.caution a {
+  color: #356865;
+}
+
+progress,
+meter,
+[class*="progress"] {
+  background-color: #27473e;
+  color: #e4b84f;
+  border-color: #735637;
+}
+
+#dashboard,
+.dashboard {
+  background-color: #3b2c20;
+  background-image: url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/sidebar-vine.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+  color: #f1dfbc;
+  border: 3px solid #76593a;
+  box-shadow: inset 0 0 0 2px #4e3b2a;
+  padding-left: 2.2em;
+}
+
+#dashboard ul,
+.dashboard ul {
+  background-color: #2a1f17;
+  border-color: #7e6242;
+}
+
+#dashboard a,
+.dashboard a,
+#dashboard a:visited,
+.dashboard a:visited {
+  color: #f0dfbd;
+}
+
+#dashboard a:hover,
+.dashboard a:hover,
+#dashboard .current,
+.dashboard .current {
+  background-color: #4d684d;
+  color: #ffe7a8;
+}
+
+.splash .module {
+  background-color: #f1e4ca;
+  color: #2f3b36;
+  border: 3px solid #6d5134;
+  box-shadow: inset 0 0 0 2px #d8c39a, 0 5px 0 #24392d;
+  padding: 1em 1.15em;
+  margin-bottom: 1.25em;
+}
+
+.splash .module h2,
+.splash .module h3 {
+  color: #395a4e;
+  border-bottom: 1px solid #96774e;
+}
+
+.splash .news li {
+  border-bottom: 1px dashed #9b835f;
+}
+
+li.blurb,
+.blurb,
+.bookmark,
+.series,
+.comment,
+.own,
+.readings,
+.skins .blurb,
+.index .blurb {
+  background-color: #f4e8d0;
+  color: #2f3936;
+  border: 3px solid #6e5236;
+  box-shadow: inset 0 0 0 2px #d8c5a1, 0 5px 0 #2b4335;
+  margin: 1em 0;
+  padding: 1em 1.2em;
+}
+
+.blurb h4 a,
+.blurb h4 a:visited {
+  color: #365f57;
+}
+
+.blurb .fandoms a,
+.blurb .relationships a,
+.blurb .characters a {
+  color: #557a68;
+}
+
+.tags a.tag,
+a.tag,
+.tag {
+  display: inline-block;
+  background-color: #d8d5ac;
+  color: #355044;
+  border: 1px solid #758265;
+  border-radius: .75em;
+  padding: .16em .52em;
+  margin: .08em .04em;
+  text-decoration: none;
+}
+
+.tags a.tag:hover,
+a.tag:hover {
+  background-color: #718765;
+  color: #fff0c8;
+  border-color: #9c784b;
+}
+
+.filters,
+form.filters,
+#work-filters,
+fieldset,
+.listbox,
+form dl,
+form .wrapper {
+  background-color: #ead8b8;
+  color: #3d382f;
+  border: 3px solid #745739;
+  box-shadow: inset 0 0 0 2px #f6e7cd;
+}
+
+input,
+textarea,
+select {
+  background-color: #f7ecd7;
+  color: #2f3935;
+  border: 1px solid #876847;
+}
+
+.actions a,
+.actions a:visited,
+.actions input,
+input[type="submit"],
+button {
+  background-color: #526d50;
+  color: #fff0cf;
+  border: 1px solid #9d794b;
+  border-radius: .35em;
+  box-shadow: inset 0 1px 0 #71876c, 0 2px 0 #2a3b2d;
+}
+
+.actions a:hover,
+.actions input:hover,
+input[type="submit"]:hover,
+button:hover {
+  background-color: #6a8060;
+  color: #ffe6a3;
+}
+
+#workskin {
+  max-width: 55em;
+  margin: 2em auto;
+  background-color: #f3e7cf;
+  color: #302f2a;
+  border: 3px solid #705438;
+  box-shadow: inset 0 0 0 2px #d8c6a3, 0 7px 18px #061513;
+  padding: 2.3em 2.7em;
+  line-height: 1.8;
+}
+
+#footer {
+  background-color: #092829;
+  background-image: url("https://raw.githubusercontent.com/ElzDe/moss-and-moonlight-ao3/main/assets/footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  color: #f1dfbd;
+  border-top: 4px solid #6d5135;
+  padding-bottom: 18%;
+}
+
+#footer a,
+#footer a:visited {
+  color: #d8ead1;
+}
+
+@media only screen and (max-width: 62em) {
+  #header {
+    padding-top: 34%;
+    background-size: 135% auto;
+  }
+
+  #dashboard,
+  .dashboard {
+    background-image: none;
+    padding-left: 0;
+  }
+
+  #footer {
+    padding-bottom: 26%;
+    background-size: 145% auto;
+  }
+
+  #main {
+    padding: 1em;
+  }
+}
+
+@media only screen and (max-width: 42em) {
+  #header {
+    padding-top: 42%;
+    background-size: 170% auto;
+  }
+
+  #workskin {
+    padding: 1.4em 1em;
+  }
+
+  #footer {
+    padding-bottom: 32%;
+    background-size: 170% auto;
+  }
+}
